@@ -107,7 +107,8 @@ ul {
     z-index: 10030;
     display: grid;
     place-items: center;
-    padding: 1.2rem;
+    min-height: 100dvh;
+    padding: clamp(0.75rem, 2vw, 1.4rem);
     background:
         radial-gradient(circle at 12% 10%, rgba(197, 160, 101, 0.18), transparent 42%),
         radial-gradient(circle at 92% 88%, rgba(197, 160, 101, 0.14), transparent 36%),
@@ -115,6 +116,8 @@ ul {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.4s ease, visibility 0.4s ease;
+    overflow-y: auto;
+    overscroll-behavior: contain;
 }
 
 .city-gate.is-hidden {
@@ -124,7 +127,8 @@ ul {
 }
 
 .city-gate-inner {
-    width: min(1200px, 100%);
+    width: min(1240px, 100%);
+    margin-inline: auto;
 }
 
 .city-gate-kicker {
@@ -138,22 +142,24 @@ ul {
 .city-gate-title {
     margin-bottom: 0.7rem;
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 4.3vw, 4.4rem);
+    font-size: clamp(1.7rem, 4vw, 4.4rem);
     font-weight: 400;
-    line-height: 0.94;
+    line-height: 0.96;
+    text-wrap: balance;
 }
 
 .city-gate-subtitle {
     margin-bottom: 1.4rem;
-    max-width: 700px;
+    max-width: 760px;
     color: #4a463f;
     line-height: 1.45;
+    text-wrap: pretty;
 }
 
 .city-gate-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    gap: clamp(0.7rem, 1.3vw, 1.2rem);
 }
 
 .city-card {
@@ -164,9 +170,10 @@ ul {
     background: #111;
     color: #fff;
     text-align: left;
-    min-height: 440px;
+    min-height: clamp(300px, 54vh, 500px);
     box-shadow: 0 24px 44px -30px rgba(17, 17, 17, 0.7);
     transition: transform 0.32s ease, box-shadow 0.32s ease;
+    isolation: isolate;
 }
 
 .city-card:hover {
@@ -186,6 +193,7 @@ ul {
 
 .city-card-media img {
     filter: grayscale(14%);
+    object-position: center center;
 }
 
 .city-card-overlay {
@@ -197,22 +205,23 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 0.26rem;
-    padding: 1.2rem 1.2rem 1.3rem;
+    padding: clamp(0.85rem, 1.8vw, 1.25rem);
     background: linear-gradient(180deg, rgba(8, 8, 8, 0) 0%, rgba(8, 8, 8, 0.78) 52%, rgba(8, 8, 8, 0.9) 100%);
 }
 
 .city-card-city {
     font-family: var(--font-heading);
-    font-size: clamp(1.35rem, 2.3vw, 2rem);
+    font-size: clamp(1.15rem, 2.15vw, 2rem);
     line-height: 1;
 }
 
 .city-card-doctor,
 .city-card-clinic {
-    font-size: 0.86rem;
+    font-size: clamp(0.72rem, 1vw, 0.86rem);
     letter-spacing: 0.07em;
     text-transform: uppercase;
     opacity: 0.9;
+    line-height: 1.25;
 }
 
 :focus-visible {
@@ -1980,30 +1989,42 @@ footer {
 
 @media (max-width: 768px) {
     .city-gate {
-        padding: 1rem;
+        padding: 0.8rem;
+    }
+
+    .city-gate-kicker {
+        margin-bottom: 0.45rem;
+    }
+
+    .city-gate-title {
+        margin-bottom: 0.55rem;
+        font-size: clamp(1.45rem, 7vw, 2.2rem);
     }
 
     .city-gate-subtitle {
-        margin-bottom: 1rem;
-        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+        font-size: 0.88rem;
+        line-height: 1.35;
     }
 
     .city-gate-grid {
         grid-template-columns: 1fr;
+        gap: 0.62rem;
     }
 
     .city-card {
-        min-height: 260px;
+        min-height: clamp(180px, 31dvh, 290px);
         border-radius: 16px;
     }
 
     .city-card-overlay {
-        padding: 0.9rem 0.9rem 1rem;
+        padding: 0.7rem 0.8rem 0.8rem;
     }
 
     .city-card-doctor,
     .city-card-clinic {
-        font-size: 0.74rem;
+        font-size: 0.69rem;
+        letter-spacing: 0.06em;
     }
 
     .cursor,
@@ -2253,6 +2274,73 @@ footer {
     .floating-cta a {
         flex: 1;
         text-align: center;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+    .city-gate {
+        align-items: start;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+    }
+
+    .city-gate-kicker {
+        margin-bottom: 0.4rem;
+    }
+
+    .city-gate-title {
+        margin-bottom: 0.45rem;
+        font-size: clamp(1.3rem, 3.6vw, 2rem);
+    }
+
+    .city-gate-subtitle {
+        margin-bottom: 0.55rem;
+        font-size: 0.82rem;
+    }
+
+    .city-gate-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.6rem;
+    }
+
+    .city-card {
+        min-height: clamp(150px, 43dvh, 240px);
+    }
+
+    .city-card-overlay {
+        padding: 0.62rem 0.72rem 0.68rem;
+    }
+}
+
+@media (max-width: 430px) {
+    .city-gate {
+        padding: 0.62rem;
+    }
+
+    .city-gate-kicker {
+        font-size: 0.66rem;
+    }
+
+    .city-gate-title {
+        font-size: clamp(1.28rem, 7.2vw, 1.65rem);
+        line-height: 1;
+    }
+
+    .city-gate-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .city-card {
+        min-height: clamp(165px, 28dvh, 240px);
+    }
+
+    .city-card-city {
+        font-size: clamp(0.98rem, 6.3vw, 1.3rem);
+    }
+
+    .city-card-clinic {
+        font-size: 0.64rem;
+        letter-spacing: 0.05em;
     }
 }
 
