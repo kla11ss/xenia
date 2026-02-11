@@ -7,7 +7,7 @@ User-agent: Yandex
 Allow: /
 Disallow: /version2/
 Disallow: /privacy-policy.html
-Host: https://kla11ss.github.io
+Host: kla11ss.github.io
 Clean-param: utm_source&utm_medium&utm_campaign
 
 Sitemap: https://kla11ss.github.io/xenia/sitemap.xml
