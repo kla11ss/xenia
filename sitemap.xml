@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://kla11ss.github.io/xenia/</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://kla11ss.github.io/xenia/nn/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kla11ss.github.io/xenia/dubai/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kla11ss.github.io/xenia/" />
+  </url>
+  <url>
+    <loc>https://kla11ss.github.io/xenia/nn/</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://kla11ss.github.io/xenia/nn/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kla11ss.github.io/xenia/dubai/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kla11ss.github.io/xenia/" />
+  </url>
+  <url>
+    <loc>https://kla11ss.github.io/xenia/dubai/</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://kla11ss.github.io/xenia/nn/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kla11ss.github.io/xenia/dubai/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kla11ss.github.io/xenia/" />
+  </url>
+  <url>
+    <loc>https://kla11ss.github.io/xenia/services/dermatology.html</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kla11ss.github.io/xenia/services/anti-age.html</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kla11ss.github.io/xenia/services/injection.html</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kla11ss.github.io/xenia/services/hardware.html</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
